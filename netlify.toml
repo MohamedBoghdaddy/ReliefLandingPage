@@ -1,10 +1,10 @@
 [build]
-  base = "client"  
+  base = "client"  # Assuming your frontend is in the 'client' directory
   publish = "build"
   command = "npm install && npm run build"
 
 [context.production.environment]
-  NODE_VERSION = "20.x"  # Specify the Node version if necessary
+  NODE_VERSION = "20.3.1"  # Replace this with a specific, valid Node.js version
 
 [[redirects]]
   from = "/*"

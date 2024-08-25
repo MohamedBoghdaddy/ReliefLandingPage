@@ -1,0 +1,82 @@
+.Section4 {
+  padding: 20px 0;
+  width: 100%;
+  box-sizing: border-box;
+  background-color: #f9f9f9;
+  margin-left: 76px;
+}
+
+.Section4 .row,
+.Section4 .col {
+  padding: 60px 0;
+}
+
+.download-button:hover {
+  background-color: #323c43;
+  color: #f9f9f9;
+}
+
+.slider1 {
+  margin-top: 30px;
+  margin-left: 10px;
+  margin-right: 20px;
+  height: 74vh !important;
+  width: 96vw !important;
+}
+
+.slick-slide {
+  display: flex;
+  justify-content: center;
+  transform: perspective(1000px) rotateY(15deg);
+  transition: transform 0.3s;
+}
+
+.slick-slide:hover {
+  transform: perspective(1000px) rotateY(0);
+}
+
+.slick-track {
+  display: flex;
+  align-items: center;
+}
+
+.Slider .slick-list {
+  display: flex;
+  justify-content: space-between !important;
+}
+
+.card-container {
+  padding: 10px;
+}
+
+.custom-card {
+  width: 18rem;
+  transition: transform 0.3s;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.custom-card:hover {
+  transform: translateY(-10px);
+}
+
+@media only screen and (max-width: 766px) {
+.slick-slide {
+    justify-content: space-around;
+  }
+  
+  .Section4 {
+    margin-left: 0;
+    padding: 10px 0;
+  }
+  
+  .slider1 {
+    width: 100vw !important;
+    margin-left: 0;
+    margin-right: 0;
+  }
+
+  .slick-slide > div {
+    width: 80%; /* Adjust the width of cards to fit smaller screens */
+  }
+
+}

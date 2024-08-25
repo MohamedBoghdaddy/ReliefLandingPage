@@ -1,5 +1,5 @@
-const express = require("express");
-const Subscriber = require("../models/Subscriber");
+import express from "express";
+import Subscriber from "../models/Subscriber.js";
 
 const router = express.Router();
 
@@ -17,4 +17,4 @@ router.post("/", async (req, res) => {
   }
 });
 
-module.exports = router;
+export default router;

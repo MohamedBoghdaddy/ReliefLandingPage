@@ -1,6 +1,7 @@
-const express = require("express");
+import express from "express";
+import Stripe from "stripe";
+
 const router = express.Router();
-const Stripe = require("stripe");
 const stripe = Stripe(process.env.STRIPE_SECRET_KEY);
 
 router.post("/create-checkout-session", async (req, res) => {
@@ -33,4 +34,4 @@ router.post("/create-checkout-session", async (req, res) => {
   }
 });
 
-module.exports = router;
+export default router;

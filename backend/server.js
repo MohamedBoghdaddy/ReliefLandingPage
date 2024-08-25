@@ -1,12 +1,16 @@
-const express = require("express");
-const mongoose = require("mongoose");
+import path from "path";
+import { fileURLToPath } from "url";
+import express from "express";
+import mongoose from "mongoose";
+import cors from "cors";
+import dotenv from "dotenv";
+import paymentRoutes from "./routes/paymentRoutes.js";
+import subscriberRoutes from "./routes/SubscriberRoutes.js";
 
+dotenv.config();
 
-const cors = require("cors");
-require("dotenv").config();
-
-const subscriberRoutes = require("./routes/subscriberRoutes");
-const paymentRoutes = require("./routes/paymentRoutes");
+const __filename = fileURLToPath(import.meta.url);
+const __dirname = path.dirname(__filename);
 
 const app = express();
 
@@ -30,6 +34,18 @@ mongoose
   .catch((err) => {
     console.error("Failed to connect to MongoDB", err);
   });
+
+app.get("/test", (req, res) => {
+  res.send("Backend is working!");
+});
+
+// Serve static files from the React app
+app.use(express.static(path.join(__dirname, "./client/build")));
+
+// Handle React routing, return all requests to React app
+app.get("*", (req, res) =>
+  res.sendFile(path.join(__dirname, "./client/build/index.html"))
+);
 
 const PORT = process.env.PORT || 5000;
 app.listen(PORT, () => {

@@ -1,0 +1,12 @@
+[build]
+  base = "client"  
+  publish = "build"
+  command = "npm install && npm run build"
+
+[context.production.environment]
+  NODE_VERSION = "20.x"  # Specify the Node version if necessary
+
+[[redirects]]
+  from = "/*"
+  to = "/index.html"
+  status = 200

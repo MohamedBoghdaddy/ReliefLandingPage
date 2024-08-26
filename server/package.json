@@ -1,5 +1,5 @@
 {
-  "name": "backend",
+  "name": "server",
   "version": "1.0.0",
   "description": "",
   "main": "server.js",
@@ -24,6 +24,7 @@
     "react-dom": "^18.3.1",
     "react-scripts": "5.0.1",
     "react-slick": "^0.30.2",
+    "server": "file:",
     "slick-carousel": "^1.8.1",
     "stripe": "^16.8.0",
     "web-vitals": "^2.1.4"

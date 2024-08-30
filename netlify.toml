@@ -4,4 +4,4 @@
   base = "client"  # Set this if your package.json is in the client directory
 
 [build.environment]
-  NODE_VERSION = "20.x"
+  NODE_VERSION = "18.x"

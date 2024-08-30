@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import axios from "axios";
+import "./styles/subscribe.css";
 
 const SubscribeSection = () => {
   const [email, setEmail] = useState("");
@@ -7,10 +8,7 @@ const SubscribeSection = () => {
 
   const handleSubscribe = async () => {
     try {
-      const response = await axios.post(
-        "http://localhost:5000/api/subscribers",
-        { email }
-      );
+      const response = await axios.post("/api/subscribers", { email });
       setMessage(response.data.message);
       setEmail("");
     } catch (error) {
@@ -27,8 +25,11 @@ const SubscribeSection = () => {
         value={email}
         onChange={(e) => setEmail(e.target.value)}
         placeholder="Enter your email"
+        className="subscribe-input"
       />
-      <button onClick={handleSubscribe}>Subscribe</button>
+      <button onClick={handleSubscribe} className="subscribe-button">
+        Subscribe
+      </button>
       {message && <p>{message}</p>}
     </section>
   );

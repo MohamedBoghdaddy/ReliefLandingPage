@@ -1,53 +1,63 @@
 .navbar {
-    background: #fff;
-    height: 80px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    position: sticky;
-    top: 0;
-    z-index: 10;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  background: #fff;
+  height: 80px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: sticky;
+  top: 0;
+  z-index: 10;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
 }
 
 .navbar-container {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    width: 100%;
-    max-width: 1200px;
-    padding: 0 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  max-width: 1200px;
+  padding: 0 20px;
 }
 
 .navbar-logo img {
-    height: 60px;
+  height: 60px;
 }
 
 .nav-menu {
-    display: flex;
-    list-style: none;
-    text-align: center;
+  display: flex;
+  list-style: none;
+  text-align: center;
 }
 
 .nav-item {
-    margin-left: 20px;
+  margin-left: 20px;
+  color: #333;
 }
 
 .nav-links {
-    color: #333;
-    text-decoration: none;
-    font-size: 18px;
-    font-weight: 500;
-    padding: 8px 12px;
+  color: #333;
+  text-decoration: none;
+  font-size: 18px;
+  font-weight: 500;
+  padding: 8px 12px;
 }
 
 .nav-links-button {
-    background-color: #ff6f61;
-    color: white;
-    border-radius: 4px;
-    padding: 8px 20px;
+  background-color: #ff6f61;
+  color: white;
+  border-radius: 4px;
+  padding: 8px 20px;
 }
 
 .nav-links-button:hover {
-    background-color: #ff3b2f;
+  background-color: #ff3b2f;
+}
+
+/* Custom Hamburger Icon */
+.navbar-toggler {
+  border-color: #ff6f61;
+}
+
+.navbar-toggler-icon {
+  background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 30 30' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='%23ff6f61' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 7h22M4 15h22M4 23h22'/%3E%3C/svg%3E");
 }

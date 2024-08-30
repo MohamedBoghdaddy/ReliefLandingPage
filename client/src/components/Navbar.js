@@ -7,9 +7,7 @@ import { useNavigate } from "react-router-dom";
 const Navbar = () => {
    const navigate = useNavigate();
 
-   const handleDonateNow = () => {
-     navigate("/donate");
-   };
+  
   return (
     <nav className="navbar">
       <div className="navbar-container">

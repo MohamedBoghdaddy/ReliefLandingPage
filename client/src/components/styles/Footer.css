@@ -1,34 +1,35 @@
 .footer {
-    background-color: #333;
-    color: #fff;
-    padding: 40px 20px;
-    text-align: left;
+  background-color: #092f4b;
+  color: #fff;
+  padding: 40px 20px;
+  text-align: left;
+  margin-bottom: 0; /* This ensures the footer stays at the bottom */
 }
 
 .footer-container {
-    display: flex;
-    justify-content: space-between;
-    max-width: 1200px;
-    margin: auto;
+  display: flex;
+  justify-content: space-between;
+  max-width: 1200px;
+  margin: auto;
 }
 
 .footer-left,
 .footer-right {
-    flex: 1;
+  flex: 1;
 }
 
 .footer-left p,
 .footer-right p {
-    margin: 10px 0;
+  margin: 10px 0;
 }
 
 .social-icons a {
-    color: #fff;
-    margin-right: 10px;
-    font-size: 20px;
+  color: #fff;
+  margin-right: 10px;
+  font-size: 20px;
 }
 
 .footer-bottom {
-    text-align: center;
-    margin-top: 20px;
+  text-align: center;
+  margin-top: 20px;
 }

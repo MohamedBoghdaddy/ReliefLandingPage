@@ -31,6 +31,8 @@ const App = () => {
           path="/donate"
           element={
             <>
+              <Navbar />
+
               <Payment />
               <Footer />
             </>

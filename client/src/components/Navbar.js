@@ -2,10 +2,8 @@ import React from "react";
 import "./styles/Navbar.css";
 import logo from "./assets/images/reliefeg-logo-120.webp"; // Assuming you download the logo
 import "bootstrap/dist/css/bootstrap.min.css";
-import { useNavigate } from "react-router-dom";
 
 const Navbar = () => {
-   const navigate = useNavigate();
 
   
   return (

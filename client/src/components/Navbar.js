@@ -1,42 +1,74 @@
-import React from "react";
-import "./styles/Navbar.css";
-import logo from "./assets/images/reliefeg-logo-120.webp"; // Assuming you download the logo
+import React, { useState } from "react";
+import { Navbar, Container, Nav } from "react-bootstrap";
+import { Link as ScrollLink } from "react-scroll"; // Importing Scroll Link for smooth scrolling
+import { Link } from "react-router-dom";
+
+import logo from "./assets/images/reliefeg-logo-120.webp";
 import "bootstrap/dist/css/bootstrap.min.css";
+import "./styles/Navbar.css";
 
-const Navbar = () => {
+const NavbarComponent = () => {
+  const [expanded, setExpanded] = useState(false);
 
-  
+  const handleNavCollapse = () => setExpanded(!expanded);
+
   return (
-    <nav className="navbar">
-      <div className="navbar-container">
-        <a href="/" className="navbar-logo">
-          <img src={logo} alt="ReliefEG Logo" />
-        </a>
-        <ul className="nav-menu">
-          <li className="nav-item">
-            <a href="/" className="nav-links">
+    <Navbar expand="lg" className="navbar" variant="dark" expanded={expanded}>
+      <Container fluid>
+        <Navbar.Brand as={ScrollLink} to="home" className="navbar-brand">
+          <img
+            src={logo}
+            alt="ReliefEG Logo"
+            style={{ width: "80px", height: "57px", top: 0 }}
+            onClick={handleNavCollapse}
+          />
+        </Navbar.Brand>
+        <Navbar.Toggle
+          aria-controls="basic-navbar-nav"
+          className="navbar-toggler"
+          onClick={handleNavCollapse}
+        />
+        <Navbar.Collapse id="navbarScroll" className="navbar-collapse">
+          <Nav className="navbar-nav ms-auto" navbarScroll>
+            <Nav.Link
+              as={Link}
+              to="/"
+              className="nav-item"
+              onClick={handleNavCollapse}
+            >
               Home
-            </a>
-          </li>
-          <li className="nav-item">
-            <a href="#about" className="nav-links">
+            </Nav.Link>
+            <ScrollLink
+              to="about"
+              smooth={true}
+              duration={500}
+              className="nav-item nav-link"
+              onClick={handleNavCollapse}
+            >
               About Us
-            </a>
-          </li>
-          <li className="nav-item">
-            <a href="#contact" className="nav-links">
+            </ScrollLink>
+            <ScrollLink
+              to="contact"
+              smooth={true}
+              duration={500}
+              className="nav-item nav-link"
+              onClick={handleNavCollapse}
+            >
               Contact Us
-            </a>
-          </li>
-          <li className="nav-item">
-            <a href="/donate" className="nav-links nav-links-button">
+            </ScrollLink>
+            <Nav.Link
+              as={Link}
+              to="/donate"
+              className="nav-links nav-links-button"
+              onClick={handleNavCollapse}
+            >
               Donate
-            </a>
-          </li>
-        </ul>
-      </div>
-    </nav>
+            </Nav.Link>
+          </Nav>
+        </Navbar.Collapse>
+      </Container>
+    </Navbar>
   );
 };
 
-export default Navbar;
+export default NavbarComponent;

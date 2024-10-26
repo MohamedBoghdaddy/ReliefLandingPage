@@ -5,7 +5,7 @@
 
 Welcome to the **ReliefLandingPage** repository! This project provides a sleek, modern, and fully responsive landing page template tailored for humanitarian and relief organizations. 🏥 Our goal is to deliver an accessible and visually engaging template that helps organizations communicate their mission effectively.
 
-##⚙️ Tech Stack
+## ⚙️ Tech Stack
 
 - Frontend: React, Tailwind CSS
 - Backend: Node.js, Express

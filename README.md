@@ -21,10 +21,10 @@ Welcome to the **ReliefLandingPage** repository! This project provides a sleek, 
 
 Here are some visuals of the **ReliefLandingPage**:
 
-![Homepage](../client/src/assets/images/image.png)  
+![Homepage](./client/src/assets/images/image.png)  
 *Main Homepage View*
 
-![projects](../client/src/assets/images/proj.png)  
+![projects](./client/src/assets/images/proj.png)  
 *Mobile View for on-the-go access*
 
 ## 🛠️ Installation

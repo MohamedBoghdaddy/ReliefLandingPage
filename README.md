@@ -1,8 +1,5 @@
 # ReliefLandingPage 🌍
 
-![License](https://img.shields.io/github/license/MohamedBoghdaddy/ReliefLandingPage)
-![Version](https://img.shields.io/github/v/release/MohamedBoghdaddy/ReliefLandingPage)
-
 Welcome to the **ReliefLandingPage** repository! This project provides a sleek, modern, and fully responsive landing page template tailored for humanitarian and relief organizations. 🏥 Our goal is to deliver an accessible and visually engaging template that helps organizations communicate their mission effectively.
 
 ## ⚙️ Tech Stack
